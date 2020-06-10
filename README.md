@@ -5,4 +5,5 @@ Crops  UN consiste en un sistema basado en  el internet de las  cosas   que tien
 - Sensor FC-28.
 - Aplicación de monitoreo para Android. 
 - Electroválvula 12VDC. 
+- Página WEB relacionada con el monitoreo.  
 
