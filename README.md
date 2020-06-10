@@ -3,9 +3,6 @@ Crops  UN consiste en un sistema basado en  el internet de las  cosas   que tien
 - Tarjeta ESP32.
 - Sensor DHT11. 
 - Sensor FC-28.
-- Aplicaci\'on de monitoreo para Android. 
-- Electrov\'alvula 12VDC 
-
-
-## Método de riego: 
+- Aplicación de monitoreo para Android. 
+- Electroválvula 12VDC. 
 
