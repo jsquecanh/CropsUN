@@ -1,25 +1,39 @@
 #include <WiFi.h>
 #include "FirebaseESP32.h"
 #include "FirebaseJson.h"
+#include "DHT.h"
+#include <Adafruit_Sensor.h>
+
+// Datos de conexion  a base de datos y a internet. 
 #define FIREBASE_HOST ""
 #define FIREBASE_AUTH ""
 #define WIFI_SSID ""
 #define WIFI_PASSWORD ""
 
+// Pin sensor DHT11 
+#define DHTPIN 4
+#define DHTTYPE DHT11
+
+
+// Inicializa la base de datos 
 FirebaseData firebaseData;
 String ruta = "/sensor1";
 
 
+DHT dht(DHTPIN, DHTTYPE);
 void setup() 
 {
-
-
+ //  Salidas y entradas por sensor y actuador. 
+ pinMode(2,OUTPUT); 
 pinMode(35,INPUT);
+ 
+ // Inicializar .
+   Serial.begin(115200);
+  Serial.println();
+  Serial.println();
+ dht.begin();
 
  
-  Serial.begin(115200);
-  Serial.println();
-  Serial.println();
 
   WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
   Serial.print("Conectado al Wi-Fi");
@@ -36,112 +50,53 @@ pinMode(35,INPUT);
   Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH);
   Firebase.reconnectWiFi(true);
 
-  
-  //----------------------------------------------
-  //---------------Eliminar datos-----------------
-  //----------------------------------------------
- 
-  //Firebase.deleteNode(firebaseData, "/sensor_temperatura");
-  
-  
-  //----------------------------------------------
-  //-------------Escritura de datos---------------
-  //----------------------------------------------
-  
-  // Escribe un entero
-  // Firebase.setInt(firebaseData, ruta + "/numerico", 123);
-  
-  
-  // Escribe un decimal;
-  //Firebase.setFloat(firebaseData, ruta + "/numerico", 123.45);
-  
-  // Escribe un binario
-  //Firebase.setBool(firebaseData, ruta + "/logico", false);
-
-  // Escribe un texto
-  //Firebase.setString(firebaseData, ruta + "/texto", "Hola choco");
-
-  // Escribe un JSON
-  /*String cadena="Hola choco con JSON";
-  float numerico=876.45;
-  bool logico=true;
-  String JSONdata = "{\"numerico\":" + String(numerico) +", \"logico\":"+ String (logico) +", \"texto\":\""+ cadena + "\"}";
-  Firebase.setJSON(firebaseData, ruta + "/hijo", JSONdata);
-  Serial.println(JSONdata);*/
-
-  //----------------------------------------------
-  //---------------Lectura de datos---------------
-  //----------------------------------------------
-  
-  //leer Entero
-  //Firebase.getInt(firebaseData, ruta + "/hijo/logico");
-  //Serial.println(firebaseData.intData());
-
-  //leer Decimal
-  //Firebase.getFloat(firebaseData, ruta + "/hijo/numerico");
-  //Serial.println(firebaseData.floatData());
-  
-  //leer Texto
-  //Firebase.getString(firebaseData, ruta + "/hijo/texto");
-  //Serial.println(firebaseData.stringData());
-
-  //leer JSON
-  //Firebase.getJSON(firebaseData, ruta + "/hijo");
-  //Serial.println(firebaseData.jsonData());
-
-  //----------------------------------------------
-  //----------------Push de datos-----------------
-  //----------------------------------------------
-    
-  //push Entero
-  //Firebase.pushInt(firebaseData, ruta + "/Push/numerico", 123);
-
-  //push Decimal
- // Firebase.pushFloat(firebaseData, ruta + "/Push/entero", 123);
-
-  //push String
-  //Firebase.pushString(firebaseData, ruta + "/Push/texto", "asdsd");
-
-  //push Binario
-  //Firebase.pushBool(firebaseData, ruta + "/Push/funcionando", false);
-
-
   while(true){
-    double adc = analogRead(35); 
-    double adc2 = adc/12;
-    Serial.println(String(adc));
-  //  push JSON
-  String JSONdata = "{\"sensora\":" + String(adc) +", \"sensorb\":"+ String(adc2) +", \"Texto\":\""+ "Valor variables" + "\"}";
-  Firebase.pushJSON(firebaseData, ruta + "/", JSONdata);
+    // Lectura se sensor FC-28
+    float humedadsuelo = analogRead(35); 
+   // si la tierra es seca se enciende el actuador dado por el pin . Espera dos segundos y vuelve a realizar el monitoreo . 
+if(humedadsuelo<50){
+  digitalWrite(2,HIGH); 
+  delay(1000); 
+  digitalWrite(2,LOW); 
+  delay(1000); 
   
+  }
+   // Se hacen las respectivas medidas  de humedad y temperatura.  
+   
+    float humedad = dht.readHumidity(); 
+    float temperatura = dht.readTemperature();
+
+   // Se comprueba si  funciona el sensor DHT 11 
+   
+   if (isnan(humedad) || isnan(temperatura)) {                                                
+  
+    humedad = 0 ;
+    temperatura = 0 ; 
+  }
+  // Imprime  el valor de los sensores , antes del envio . 
+    Serial.println(humedad);
+    Serial.println(temperatura);
+    Serial.println(humedadsuelo);
+   
+  //  push JSON para poner los datos en la  ESP32
+   
+  String JSONdata = "{\"sensora\":" + String(humedad) +", \"sensorb\":"+ String(temperatura) +", \"sensorc\":\""+ String(humedadsuelo) + "\"}";
+  Firebase.pushJSON(firebaseData, ruta + "/", JSONdata);
+   
+
 
   delay(5000);
   }
-  //----------------------------------------------
-  //------------------Streaming-------------------
-  //----------------------------------------------
-
-  //streaming
-  //Serial.println("Inicio de streaming");
-  //Serial.println("RUTA: "+ruta + "/hijo/entero");
-  //Firebase.beginStream(firebaseData, ruta + "/hijo/texto");
-
-  //----------------------------------------------
-  //-------------Finaliza la conexion-------------
-  //----------------------------------------------
-
-  //Firebase.end(firebaseData);
-
-
-
 }
 
 void loop() 
 {
   //----------------------------------------------
-  //--------------Streaming de datos--------------
+  //--------------Medida de datos-------------
   //----------------------------------------------
-
+float humedad = dht.readHumidity(); 
+float temperatura = dht.readTemperature();
+ // Stream de datos. 
 Firebase.readStream(firebaseData);    
 if (firebaseData.streamAvailable()) 
   {  
