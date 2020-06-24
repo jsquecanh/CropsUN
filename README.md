@@ -23,6 +23,8 @@ Conformada por un transistor en modo de interruptor con el fin de activar el act
 Elaborada en React,  tiene el proposito de realizar el monitoreo y realizar un estudio de las distintas estrategias de riego (Versión incompleta CROPS-UN-master.zip).
 
 ## Prototipo
+El esquema del prototipo actual viene dado por: 
+![prototipo](https://user-images.githubusercontent.com/64376744/85492857-7a061a00-b59b-11ea-87c5-875c964ee0e2.PNG)
 
 
 
