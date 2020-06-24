@@ -40,5 +40,11 @@ El esquema del prototipo actual viene dado por:
 ![prototipo](https://user-images.githubusercontent.com/64376744/85492857-7a061a00-b59b-11ea-87c5-875c964ee0e2.PNG)
 
 
-### Esquema de app móvil: 
+### Modelo de app móvil: 
+El modelo preliminar de la app móvil se da por: 
+
+![esquemamovil](https://user-images.githubusercontent.com/64376744/85495201-b176c580-b59f-11ea-90f4-5262b874f654.PNG)
+
+## Modelo web: 
+El modelo de datos viene dado por: 
 
