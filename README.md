@@ -1,9 +1,9 @@
 # CROPS UN  - Optimización del agua en la agricultura
 
-Juan Sebastián Quecán Herrera 
-Nicolás Andrés Rubiano Méndez
-Johnathan Andrés León Rodríguez
-Germán Steven Fernández Garzón
+- Juan Sebastián Quecán Herrera 
+- Nicolás Andrés Rubiano Méndez  
+- Johnathan Andrés León Rodríguez
+- Germán Steven Fernández Garzón
 
 Rigoberto Sáenz Imbacuán - tutor
 
