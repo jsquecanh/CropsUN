@@ -86,4 +86,11 @@ El resultado físico actual se puede ver dado por:
 
 
 
+![jsutificacionproto](https://user-images.githubusercontent.com/64376744/85501084-45e62580-b5aa-11ea-93c4-6fde77e8bf59.PNG)
+
+
+
+# Contacto 
+
+## cropsun2020@gmail.com
 
