@@ -1,3 +1,4 @@
+![Logo CROPS UN](https://user-images.githubusercontent.com/64376744/85499593-86906f80-b5a7-11ea-8ed8-07a4f59d4c05.png) ![ods](https://user-images.githubusercontent.com/64376744/85499607-8abc8d00-b5a7-11ea-9c83-a33790140582.PNG)
 # CROPS UN  - Optimización del agua en la agricultura
 
   
@@ -45,7 +46,9 @@ El modelo preliminar de la app móvil se da por:
 
 ![esquemamovil](https://user-images.githubusercontent.com/64376744/85495201-b176c580-b59f-11ea-90f4-5262b874f654.PNG)
 
-
+### Resultado app movil: 
+El resultado de la app móvil,  viene dado por: 
+![app](https://user-images.githubusercontent.com/64376744/85499706-b93a6800-b5a7-11ea-9a4a-658eb47b13a5.png)
 
 
 ## Modelo web: 
@@ -67,3 +70,10 @@ El esquema básico de montaje del monitoreo viene dado por:
 
 ![circuito](https://user-images.githubusercontent.com/64376744/85495207-b50a4c80-b59f-11ea-98ba-b2af0f2ae59a.PNG)
 
+
+
+
+![sistema](https://user-images.githubusercontent.com/64376744/85499563-77112680-b5a7-11ea-871d-687f7a6afd63.png)
+
+
+![Arbol de problemas](https://user-images.githubusercontent.com/64376744/85499714-bb042b80-b5a7-11ea-83d8-c1e72e81610b.png)
