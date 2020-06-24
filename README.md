@@ -28,3 +28,4 @@ El esquema del prototipo actual viene dado por:
 
 
 ### Esquema de app móvil: 
+
