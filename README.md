@@ -20,7 +20,9 @@ actuardor controlado por relé de 5 voltios,  con el fin de suministrar el agua.
 ### Etapa de potencia: 
 Conformada por un transistor en modo de interruptor con el fin de activar el actuador,  su implementación está con el fin de limitar el consumo eléctrico del sistema. 
 ### Página WEB relacionada con el monitoreo: 
-Elaborada en React,  tiene el proposito de realizar el monitoreo y realizar un estudio de las distintas estrategias de riego (Versión incompleta ).
+Elaborada en React,  tiene el proposito de realizar el monitoreo y realizar un estudio de las distintas estrategias de riego (Versión incompleta CROPS-UN-master.zip).
 
-#
+## Prototipo
+
+
 
