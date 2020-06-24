@@ -27,4 +27,4 @@ El esquema del prototipo actual viene dado por:
 ![prototipo](https://user-images.githubusercontent.com/64376744/85492857-7a061a00-b59b-11ea-87c5-875c964ee0e2.PNG)
 
 
-
+### Esquema de app móvil: 
