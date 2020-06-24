@@ -77,5 +77,13 @@ El sistema implementado dado por el esquema anterior viene dado por:
 
 ![sistema](https://user-images.githubusercontent.com/64376744/85499563-77112680-b5a7-11ea-871d-687f7a6afd63.png)
 
+## Resultado físico
+El resultado físico actual se puede ver dado por: 
+
+![prot](https://user-images.githubusercontent.com/64376744/85500686-a032b680-b5a9-11ea-9b6e-89438a02fee5.jpg)
+
+## Justificación de prototipo: 
+
+
 
 
