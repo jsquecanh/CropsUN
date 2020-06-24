@@ -1,4 +1,6 @@
 # CROPS UN  - Optimización del agua en la agricultura
+<p align="center">
+  
 
 - Juan Sebastián Quecán Herrera 
 - Nicolás Andrés Rubiano Méndez  
@@ -10,7 +12,7 @@ Rigoberto Sáenz Imbacuán - tutor
 Taller de proyectos interdisciplinarios -  TPI 
 Universidad Nacional de Colombia. 
 
-
+</p>
 ## El problema 
 Según cifras del  banco  mundial,  cerca del  70% del  agua extraída en  el  mundo  es   consumida por la agricultura,  por esta rezón se requiere de métodos eficientes al respecto y más sabiendo  que   para el  2100 crecerá la población en un 70%  aproximadamente y el cambio climático a aumentado la temperatura 1.1°C , según greenpeace (ONG). Por esta situación,  es necesaria la implemenntación de un sistema que enfrente la problemática de la mala gestión del agua enfocada a la agricultura. 
 
