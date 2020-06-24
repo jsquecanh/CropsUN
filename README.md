@@ -40,29 +40,5 @@ El esquema del prototipo actual viene dado por:
 ![prototipo](https://user-images.githubusercontent.com/64376744/85492857-7a061a00-b59b-11ea-87c5-875c964ee0e2.PNG)
 
 
-### Modelo de app móvil (Se puede encontrar en el repositorio ): 
-El modelo preliminar de la app móvil se da por: 
-
-![esquemamovil](https://user-images.githubusercontent.com/64376744/85495201-b176c580-b59f-11ea-90f4-5262b874f654.PNG)
-
-### Modelo web (Se puede encontrar en el repositorio ): 
-El modelo de datos viene dado por: 
-
-![modelodedatos](https://user-images.githubusercontent.com/64376744/85495185-ad4aa800-b59f-11ea-9f1a-039253a921d1.PNG)
-
-#### Resultado  web 
-
-El resultado preliminar de la app web viene dada por: 
-
-![appweb1](https://user-images.githubusercontent.com/64376744/85495211-b76ca680-b59f-11ea-9a1a-e416756f8d12.PNG)
-![appweb](https://user-images.githubusercontent.com/64376744/85495218-b9cf0080-b59f-11ea-9786-12aa18da1816.PNG)
-
-### Esquema circuital
-
-El esquema básico de montaje del monitoreo viene dado por: 
-
-![circuito](https://user-images.githubusercontent.com/64376744/85495207-b50a4c80-b59f-11ea-98ba-b2af0f2ae59a.PNG)
-
-
-
+### Esquema de app móvil: 
 
