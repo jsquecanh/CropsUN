@@ -17,6 +17,8 @@ Universidad Nacional de Colombia.
 ## El problema 
 Según cifras del  banco  mundial,  cerca del  70% del  agua extraída en  el  mundo  es   consumida por la agricultura,  por esta rezón se requiere de métodos eficientes al respecto y más sabiendo  que   para el  2100 crecerá la población en un 70%  aproximadamente y el cambio climático a aumentado la temperatura 1.1°C , según greenpeace (ONG). Por esta situación,  es necesaria la implemenntación de un sistema que enfrente la problemática de la mala gestión del agua enfocada a la agricultura. 
 
+![Arbol de problemas](https://user-images.githubusercontent.com/64376744/85499714-bb042b80-b5a7-11ea-83d8-c1e72e81610b.png)
+
 ## La solución
 
  La solución planteada en Crops  UN consiste en un sistema basado en  el internet de las  cosas   que tiene   como  objetivo  el   control  y el monitoreo de los cultivos :
@@ -71,9 +73,9 @@ El esquema básico de montaje del monitoreo viene dado por:
 ![circuito](https://user-images.githubusercontent.com/64376744/85495207-b50a4c80-b59f-11ea-98ba-b2af0f2ae59a.PNG)
 
 
-
+El sistema implementado dado por el esquema anterior viene dado por: 
 
 ![sistema](https://user-images.githubusercontent.com/64376744/85499563-77112680-b5a7-11ea-871d-687f7a6afd63.png)
 
 
-![Arbol de problemas](https://user-images.githubusercontent.com/64376744/85499714-bb042b80-b5a7-11ea-83d8-c1e72e81610b.png)
+
